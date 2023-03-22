@@ -1,10 +1,8 @@
 @startuml ホテル従業員
-' left to right direction
+ left to right direction
 actor ホテル従業員
 actor 経営者
-rectangle ホテル {
 
-}
-ホテル <|-- ホテル従業員
-ホテル <|-- 経営者
+経営者 <|-- ホテル従業員
+
 @enduml
