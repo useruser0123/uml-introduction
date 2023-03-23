@@ -1,4 +1,4 @@
-@startuml
+@startuml 販売管理システム
 left to right direction
 actor 出荷担当者
 usecase 出荷
