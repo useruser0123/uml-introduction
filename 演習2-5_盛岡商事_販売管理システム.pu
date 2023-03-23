@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor 出荷担当者
+usecase 出荷
+rectangle "販売管理システム" as system {
+usecase 注文確認
+usecase 出荷登録
+}
+出荷担当者 --> 注文確認 
+注文確認 --> 出荷
+出荷担当者 --> 出荷登録
+@enduml
