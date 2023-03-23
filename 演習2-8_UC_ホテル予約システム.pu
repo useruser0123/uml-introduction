@@ -1,0 +1,30 @@
+@startuml ホテル予約システム
+left to right direction
+
+actor 利用者 as user
+actor ホテル従業員 as staff
+actor ホテル管理者 as admin
+
+rectangle ホテル予約システム {
+usecase 会員登録をする as k
+usecase ログインする as login
+usecase ホテル空室状況を閲覧する as e
+usecase ホテルの部屋を予約する as y
+usecase 空室状況を入力する as a
+usecase 予約の集計を行う as b
+usecase 従業員がログインする as log
+
+user --> k
+k ..> login
+login --> y
+user --> e
+staff --> log
+log --> a
+admin --> (管理者がログインする)
+(管理者がログインする) --> a
+(管理者がログインする) --> b
+
+
+}
+
+@enduml
