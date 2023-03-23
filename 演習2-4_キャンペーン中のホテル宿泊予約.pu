@@ -7,5 +7,5 @@ usecase キャンペーン
 }
 利用者 -right-> input
 input .> (ログイン) : <<include>>
-キャンペーン .> input : <<ectend>>
+キャンペーン .> input : <<extend>>
 @enduml
