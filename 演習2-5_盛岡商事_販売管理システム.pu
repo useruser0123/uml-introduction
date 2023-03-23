@@ -2,10 +2,9 @@
 left to right direction
 actor 出荷担当者
 rectangle "販売管理システム" as system {
-usecase 注文状況確認
-usecase 商品出荷登録
+usecase 注文商品を確認する as a
+usecase 出荷状況を登録する as b
 }
-出荷担当者 --> 注文状況確認
-注文状況確認 --> 商品出荷
-出荷担当者 --> 商品出荷登録
+出荷担当者 --> b
+出荷担当者 --> a
 @enduml
