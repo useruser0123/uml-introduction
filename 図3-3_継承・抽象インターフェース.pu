@@ -1,0 +1,10 @@
+@startuml
+class 図3-3{
+- 社員ID
+- 社員名
+---
++ 社員ID設定(社員ID:int):void
++ 社員ID取得():int
++ 社員名設定(社員名:String):void
+}
+@enduml
