@@ -1,0 +1,21 @@
+@startuml
+
+left to right direction
+object 社員A{
+    氏名 高橋洋平
+}
+object 社員B {
+    氏名 樋口正之
+}
+object 資格A{
+    名称 情報処理安全確保支援士
+         LinuC試験Level1
+        
+}
+object 資格B{
+    名称 情報処理安全確保支援士
+}
+
+社員A "1" -- "*"資格A
+社員B "1" -- "*" 資格B
+@enduml

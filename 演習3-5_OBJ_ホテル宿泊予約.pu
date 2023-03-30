@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+object ホテル
+object Aさん
+object Bさん
+object 予約システム
+object 301号室
+object 302号室
+object 303号室
+
+ホテル "1" -- "*" 301号室
+ホテル "1" -- "*" 302号室
+ホテル "1" -- "*" 303号室
+Aさん --> 予約システム
+予約システム --> 301号室
+Bさん --> 予約システム
+予約システム --> 303号室
+@enduml
