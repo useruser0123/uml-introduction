@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+object 車
+object タイヤ1
+object タイヤ2
+object タイヤ3
+object タイヤ4
+
+車 --> タイヤ1
+車 --> タイヤ2
+車 --> タイヤ3
+車 --> タイヤ4
+@enduml
