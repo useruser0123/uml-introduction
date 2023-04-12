@@ -12,7 +12,7 @@ skinparam style strictuml
 skinparam sequenceReferenceBorderColor blue
 ' refの背景色
 skinparam sequenceReferenceBackgroundColor white
-' skinparam sequenceReferenceHeaderBackgroundColor lightblue
+skinparam sequenceReferenceHeaderBackgroundColor lightblue
 mainframe sd ログイン
 member -> login : ログイン情報入力
 activate login
