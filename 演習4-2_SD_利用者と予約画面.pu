@@ -1,0 +1,13 @@
+@startuml
+hide footbox
+mainframe sd 予約画面
+participant "画面:ログイン" as login
+participant ":予約画面" as reserve   
+activate login
+    login ->> reserve :非同期メッセージ()
+        activate reserve
+            reserve -> reserve :予約処理()
+            activate reserve
+            deactivate reserve
+
+@enduml

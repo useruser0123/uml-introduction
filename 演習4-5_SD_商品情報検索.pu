@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+actor ":会員" as user
+participant ":商品検索画面" as search <<boundary>>
+participant ":商品検索コントローラー" as controller <<control>>
+
+activate user
+    user -> search : 商品検索(商品番号)
+    activate search
+    search -> controller : 商品検索(商品番号)
+    activate controller 
+    create ":商品" as merchandise <<entity>>
+    controller --> merchandise : <<create>>
+@enduml
