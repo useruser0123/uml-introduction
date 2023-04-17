@@ -10,5 +10,17 @@ activate user
     search -> controller : 商品検索(商品番号)
     activate controller 
     create ":商品" as merchandise <<entity>>
-    controller --> merchandise : <<create>>
+    controller -->> merchandise : <<create>>作成()
+    loop 商品カテゴリ数
+    create ":商品カテゴリ" as category <<entity>>
+    controller -->> category : <<create>>生成()
+    controller -> merchandise : 商品カテゴリを設定()
+    activate merchandise
+    deactivate merchandise
+    end
+    controller -->> search :商品情報
+    deactivate controller
+    search -> search : 商品情報表示(商品情報)
+    activate search
+
 @enduml
