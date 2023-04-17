@@ -3,11 +3,11 @@ hide footbox
 mainframe sd 予約
 participant ":データ更新コントローラー" as controller <<control>>
 participant ":ホテル" as operation <<hotel>>
-participant ":予約" as reserve
 
     activate controller
         controller -> operation : 予約する()
             activate operation
+            create ":予約" as reserve
                 operation -> reserve : <<create>>
                    
                 operation -> operation : 予約登録()
