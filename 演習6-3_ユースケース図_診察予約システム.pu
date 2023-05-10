@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+actor 利用者
+actor 看護師
+
+rectangle 診察予約システム{
+    usecase 予約と確認
+    usecase 順番の確認
+    usecase 順番の取消
+    usecase 現在の順番の表示
+}
+
+利用者 --> 予約と確認 : 確認する
+利用者 --> 順番の確認 : 順番の確認
+利用者 --> 順番の取消 : 順番を取り消す
+看護師 --> 現在の順番の表示 : 順番を表示する
+@enduml
