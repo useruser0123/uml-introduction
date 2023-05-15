@@ -1,0 +1,15 @@
+@startuml
+
+left to right direction
+actor 客 as user
+actor ベンダー as vendor
+rectangle 自動販売機 {
+  usecase ドリンクの購入 as buy
+  usecase ドリンクの補充 as Restock
+  usecase 売上金の回収 as collect
+  user --> buy
+  vendor --> Restock
+  vendor --> collect
+}
+
+@enduml

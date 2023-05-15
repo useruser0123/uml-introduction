@@ -1,0 +1,15 @@
+@startuml
+
+state 客 {
+    state entry <<entryPoint>>
+    state exit <<exitPoint>>
+
+  entry --> お金投入
+  お金投入 --> ボタン
+  ボタン --> ドリンク提供
+  ドリンク提供 --> exit
+}
+[*] -right-> entry
+exit -down-> [*]
+
+@enduml

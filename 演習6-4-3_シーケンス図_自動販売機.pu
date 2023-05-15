@@ -1,0 +1,24 @@
+@startuml
+
+actor 客
+participant 料金装置
+participant ボタン
+participant ドリンク
+participant ベンダー装置
+
+activate 客
+客 -> 料金装置 : お金を入れる
+activate 料金装置
+
+客 -> ボタン : ドリンクの選択
+activate ボタン
+ボタン -> ドリンク : ドリンクの指定
+deactivate ボタン
+activate ドリンク
+ドリンク -> ベンダー装置 : ドリンクをベンダー装置に渡す
+activate ベンダー装置
+料金装置 -> ベンダー装置 : お金の回収
+deactivate 料金装置
+客 <-- ベンダー装置 : ドリンクを提供する 
+
+@enduml
