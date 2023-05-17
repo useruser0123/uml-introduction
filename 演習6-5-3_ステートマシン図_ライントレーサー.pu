@@ -1,17 +1,21 @@
 @startuml
-
+left to right direction
 
 state ライントレーサー{
 state entry <<entryPoint>>
 state exit <<exitPoint>>
 
-entry --> 電源WS
-電源OFF --> 電源ON : 電源SWを入れる
-電源ON --> 暗い : 光センサーが黒いライン上にある
-暗い --> 明るい : 光センサーがラインを外れる
-明るい --> 暗い : 光センサーが黒いライン上にある
-明るい --> 電源OFF : 電源SWを切る
-
+entry --> 電源OFF
+電源OFF --> 電源ON : 電源を入れる
+電源ON --> 暗い 
+暗い --> 右旋回 
+明るい --> 左旋回
+暗い --> 明るい
+右旋回 --> 電源OFF : 電源SWを切る
+左旋回 --> 電源OFF : 電源SWを切る
+電源OFF --> exit
 }
+[*] --> entry
+exit --> [*]
 
 @enduml
