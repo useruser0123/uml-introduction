@@ -1,6 +1,6 @@
 @startuml
 
-state 客 {
+state 自動販売機 {
     state entry <<entryPoint>>
     state exit <<exitPoint>>
 
