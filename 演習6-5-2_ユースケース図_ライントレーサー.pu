@@ -1,0 +1,25 @@
+@startuml
+
+left to right direction
+
+actor ユーザー as user
+actor 電源SW as sw
+
+
+rectangle ライトレーサー{
+
+usecase ライントレーサーを制御する as line
+usecase 光センサーでライントレーサーを制御する as a
+usecase 線を引く
+user --> sw : 電源ON
+user --> 線を引く
+
+sw --> a
+
+a --> line
+
+
+
+}
+
+@enduml
